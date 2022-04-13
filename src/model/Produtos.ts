@@ -3,7 +3,7 @@ import {sequelize} from '../instances/mysql';
 
 export interface ProdutoInstance extends Model{
     id:number;
-    cod_produto:number;
+    codproduto:number;
     nome_do_produto:string;
     cod_barras:string;
     unid_medida:string;
@@ -37,7 +37,7 @@ export const Produtos = sequelize.define<ProdutoInstance>('Produtos',{
     tx_de_venda:{
         type: DataTypes.FLOAT
     },
-    valor_de_entrada:{
+    valor_de_venda:{
         type: DataTypes.FLOAT
     },
     desconto:{

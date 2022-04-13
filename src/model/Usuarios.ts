@@ -3,7 +3,7 @@ import {sequelize} from '../instances/mysql';
 
 export interface UsuarioInstance extends Model{
     id:number;
-    nome:string;
+    usuario:string;
     senha:string;
     ultima_atualizacao:Date;
     data_criacao:Date;
@@ -14,9 +14,9 @@ export const Usuarios = sequelize.define<UsuarioInstance>('Usuarios',{
     id:{
         type: DataTypes.INTEGER,
         primaryKey:true,
-        autoIncrement:true
+        autoIncrement:true,
     },
-    nome:{
+    usuario:{
         type: DataTypes.STRING
     },
     senha:{
