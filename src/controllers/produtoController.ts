@@ -45,6 +45,7 @@ export const removeProduct = async(req:Request,res:Response) =>{
 };
 
 export const updateproduct = async(req:Request,res:Response)=>{
+   
 var {id} = req.body;
     const fieldupdate = await ProdutosServices.Update(req.body,id);
     
