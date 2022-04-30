@@ -24,14 +24,19 @@ export const registar = async(data:ClienteInstance,cod_cliente:number) =>{
 }
 
 export const update = async(data:ClienteInstance,cod_cliente:number) =>{
-//nao funcionando
+
     const findcliente = await Cliente.findOne({where:{cod_cliente}});
 
         if(!findcliente){
             return new Error("Cliente Não Localizado")
         }
         else{
-            await Cliente.update(data,{where:{cod_cliente}})
+            try{
+                await Cliente.update(data.toJSON(),{where:{cod_cliente}});
+            }catch(error){
+                console.log(error);
+            }
+            
         }
 
 }

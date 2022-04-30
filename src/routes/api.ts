@@ -4,6 +4,7 @@ import * as UserController from '../controllers/userController';
 import * as ProdutoController from './../controllers/produtoController';
 import * as EstoqueController from './../controllers/estoqueController';
 import * as ClienteController from './../controllers/clienteController';
+import * as VendaHeaderController from '../controllers/vendasController';
 
 const router = Router();
 
@@ -25,6 +26,8 @@ router.post('/removercliente',ClienteController.deletarCliente);
 router.post('/atualizarcliente',ClienteController.atualizarCliente);
 router.get('/buscarcliente',ClienteController.buscarCliente);
 router.get('/listarcliente',ClienteController.listarCliente);
+//-
+router.post('/salvarvenda',VendaHeaderController.salvarvenda);
 
 
 

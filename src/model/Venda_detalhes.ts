@@ -17,7 +17,7 @@ export const venda_detalhes = sequelize.define<VendaInstance>('venda_detalhes',{
         autoIncrement:true,
     },
     cod_venda:{
-        type: DataTypes.INTEGER
+        type: DataTypes.STRING
     },
     cod_produto:{
         type: DataTypes.INTEGER

@@ -13,8 +13,7 @@ export interface VendaInstance extends Model{
 export const vendas_header = sequelize.define<VendaInstance>('vendas_header',{
     cod_venda:{
         primaryKey:true,
-        autoIncrement:true,
-        type: DataTypes.INTEGER
+        type: DataTypes.STRING
     },
     cod_cliente:{
         type: DataTypes.INTEGER
